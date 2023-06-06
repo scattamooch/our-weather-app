@@ -26,27 +26,7 @@ fetch('https://login.meteomatics.com/api/v1/token', {
 }).then(function (data) {
     var token = data.access_token;
     //console.log(token);
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${NYCpostalCode}/json?access_token=${token}`) 
-        .then(function(r){
-            return r.json()
-        })
-        .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${TampapostalCode}/json?access_token=${token}`) 
-        .then(function(r){
-            return r.json()
-        })
-        .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${SFpostalCode}/json?access_token=${token}`) 
-        .then(function(r){
-            return r.json()
-        })
-        .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${SeattlepostalCode}/json?access_token=${token}`) 
-        .then(function(r){
-            return r.json()
-        })
-        .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${ChicagopostalCode}/json?access_token=${token}`) 
+    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${NYCpostalCode}+${TampapostalCode}+${SFpostalCode}+${SeattlepostalCode}+${ChicagopostalCode}/json?access_token=${token}`) 
         .then(function(r){
             return r.json()
         })
