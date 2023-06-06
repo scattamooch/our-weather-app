@@ -1,7 +1,9 @@
 //current dateTime variable
 let current = new Date();
 let cDate = current.getFullYear() + '-' + (current.getMonth() + 1) + '-' + current.getDate();
-let cTime = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+let seconds
+let secondsUnfixed = current.getSeconds();
+let cTime = current.getHours().toString().padStart(2, '0') + ":" + current.getMinutes().toString().padStart(2, '0') + ":" + current.getSeconds().toString().padStart(2, '0');
 let dateTime = cDate + 'T' + cTime + '+05:00';
 
 //postal codes
@@ -24,29 +26,29 @@ fetch('https://login.meteomatics.com/api/v1/token', {
 }).then(function (data) {
     var token = data.access_token;
     //console.log(token);
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F/${NYCpostalCode}/json?access_token=${token}`) 
+    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${NYCpostalCode}/json?access_token=${token}`) 
         .then(function(r){
-            return r.text()
+            return r.json()
         })
         .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F/${TampapostalCode}/json?access_token=${token}`) 
+    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${TampapostalCode}/json?access_token=${token}`) 
         .then(function(r){
-            return r.text()
+            return r.json()
         })
         .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F/${SFpostalCode}/json?access_token=${token}`) 
+    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${SFpostalCode}/json?access_token=${token}`) 
         .then(function(r){
-            return r.text()
+            return r.json()
         })
         .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F/${SeattlepostalCode}/json?access_token=${token}`) 
+    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${SeattlepostalCode}/json?access_token=${token}`) 
         .then(function(r){
-            return r.text()
+            return r.json()
         })
         .then(console.log)
-    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F/${ChicagopostalCode}/json?access_token=${token}`) 
+    fetch(`https://api.meteomatics.com/${dateTime}/t_2m:F,t_2m:C,precip_1h:mm,wind_speed_2m:mph,relative_humidity_2m:p/${ChicagopostalCode}/json?access_token=${token}`) 
         .then(function(r){
-            return r.text()
+            return r.json()
         })
         .then(console.log)
 }).catch(function (err) {
