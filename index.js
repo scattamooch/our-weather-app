@@ -89,8 +89,4 @@ function renderMainCity() {
     humidity.textContent = city.Humidity + " %";
     wind.textContent = city.wind_speed + " mph";
 }
-<<<<<<< HEAD
 init();
-=======
-init();
->>>>>>> 6bac469baa1d2bcf84ffa6ef8926b1acf455ff23
