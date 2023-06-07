@@ -1,1 +1,31 @@
-/* style the webpage */
+/* Light and dark mode */
+.dark-mode {
+    background-color: darkgray;
+    color: rgb(0, 0, 0);
+}
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Lists look pretty */
+li {
+    list-style-type: none;
+}
+
+/* Get everything centered up */
+
+
+/* navbar flexbox */
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* position: fixed;     
+    left: 50%;     
+    bottom: 35px;     
+    transform: translate(-50%, -50%);     
+    margin: 0 auto; */
+    /* float: left;
+    width: 20%; */
+}
