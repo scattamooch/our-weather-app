@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+<body class="light-mode">
+    <button id="mode-toggle" type="mode-submit">Press "L" to toggle Light and Dark Modes!</button>
+    <h1 id="title-bar"> Our Weather App </h1>
+    <img id="main-image-container"> </img>
+    <label for="citySelect">Select a city:</label>
+    <select id="citySelect">
+        <option id="default">Cities...</option>
+    </select>
+    <div id="main-weather-container">
+        <li id="city-name">Viewing: <span id="span-city-name"> </span> </li>
+        <li id="condition">Condition: <span id="span-condition"> </span> </li>
+        <li id="main-temp-f"> Temperature: <span id="temp_f"> </span></li>
+        <li id="feels-like"> Feels like: <span id="feelslike_f"> </span></li>
+        <li id="main-rain"> Rain: <span id="precip_in"> </span></li>
+        <li id="main-humidity"> Humidity: <span id="humidity"> </span></li>
+        <li id="main-wind-speed"> Wind speed: <span id="wind_mph"> </span></li>
+    </div> 
+    <h2 id="at-a-glance">Weather at a glance:</h2>
+    <div id="flexbox-container" class="flexbox">
+    </div>
+
+</body>
+<script type="text/javascript" src = index.js defer></script>
+</head>
+</html>

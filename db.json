@@ -1,0 +1,55 @@
+{
+    "cities": [
+        {
+            "name": "New York",
+            "condition": "Sunny",
+            "temperature": "70",
+            "feels_like": "70",
+            "rain": "0.08",
+            "Humidity": "27",  
+            "wind_speed": "8.1",
+            "img_url": "https://t3.ftcdn.net/jpg/02/50/08/68/360_F_250086872_srlXRqANYR2IbNfIylRDc3eMO9MinjnV.jpg"
+        },
+        {
+            "name": "Chicago",
+            "condition": "Overcast",
+            "temperature": "68",
+            "feels_like": "72",
+            "rain": "0",
+            "Humidity": "50",
+            "wind_speed": "13.6",
+            "img_url": "https://freesvg.org/img/sivvus_weather_symbols_3.png"
+        },
+        {
+            "name": "Miami",
+            "condition": "Partly Cloudy",
+            "temperature": "82",
+            "feels_like": "87.2",
+            "rain": "1.12",
+            "Humidity": "72",
+            "wind_speed": "9.4",
+            "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2EMAtfJuOYFCc_-iB4I2ITrd08fw6TzZjw&usqp=CAU"
+        },
+        {
+            "name": "Denver",
+            "condition": "Patchy, light rain with thunder",
+            "temperature": "57.7",
+            "feels_like": "55",
+            "rain": "0.02",
+            "Humidity": "75",
+            "wind_speed": "6.9",
+            "img_url": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-lightning-and-rain.png"
+        },
+        {
+            "name": "Los Angeles",
+            "condition": "Partly Cloudy",
+            "temperature": "66",
+            "feels_like": "66",
+            "rain": "0",
+            "Humidity": "61",
+            "wind_speed": "2.2",
+            "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2EMAtfJuOYFCc_-iB4I2ITrd08fw6TzZjw&usqp=CAU"
+            
+        }
+    ]
+}
