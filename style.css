@@ -8,6 +8,17 @@
     color: black;
 }
 
+/* Cap image size */
+#main-image-container {
+max-width: 400px;
+max-height: 300px;
+}
+
+/* Hovering over the image produces a textbox */
+#random-div {
+   position: absolute;
+}
+
 /* Lists look pretty */
 li {
     list-style-type: none;
