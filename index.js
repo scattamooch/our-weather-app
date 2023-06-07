@@ -88,6 +88,7 @@ function renderMainCity() {
     humidity.textContent = city.Humidity + " %";
     wind.textContent = city.wind_speed + " mph";
 }
+<<<<<<< HEAD
 
 function genericWeatherAdvisement(e) {
     const mouseoverCaption = document.getElementById("random-div");
@@ -117,3 +118,6 @@ function hideWeatherAdvisement() {
 }
 
 init();
+=======
+init();
+>>>>>>> main
