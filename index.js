@@ -50,7 +50,7 @@ function renderCityNavBar(city, navBar) {
     navItem.textContent = city.name;
     navItem.value = city.name;
     navItem.id = city.name;
-    navItem.addEventListener("click", renderMainCity);
+    navItem.addEventListener("click", () => renderMainCity(city));
     navBar.appendChild(navItem);
 }
 //keydown and mouseover/mouseout events housed in one spot, called by the init function. "Modes" can be edited via their sections in CSS. 
@@ -66,9 +66,9 @@ function eventListeners() {
     tooltipDiv.addEventListener("mouseover", showTooltip);
     tooltipDiv.addEventListener("mouseout", hideTooltip);
 }
-//renders the main city to be displayed when clicked --> "this." can be factored out in favor of a click event listener, it was more relevant for the dropdown menu
+//renders the main city to be displayed when clicked
 //Same situation as "blankCities": can be heavily refactored
-function renderMainCity() {
+function renderMainCity(city) {
     const conditionImg = document.getElementById("main-image-container");
     const cityName = document.getElementById("span-city-name");
     const condition = document.getElementById("span-condition");
@@ -77,9 +77,7 @@ function renderMainCity() {
     const rain = document.getElementById("precip_in");
     const humidity = document.getElementById("humidity");
     const wind = document.getElementById("wind_mph");
-    const navBarValue = this.textContent;         //this.textContent assigns the value of the "click" to navBarValue so .find still works. Workaround for transitioning from dropdown to navbar
-    const city = cities.find(city => city.name === navBarValue); //find a city name in the cities data that matches the dropdown value
-
+    
     conditionImg.src = city.img_url;
     cityName.textContent = city.name;
     condition.textContent = city.condition;
