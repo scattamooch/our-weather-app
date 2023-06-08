@@ -1,7 +1,3 @@
-//fetch the data
-//get the city names into the dropdown
-//selecting a city makes it appear in the li elements
-
 function init() {
     blankCities();
     getCities();
@@ -62,9 +58,9 @@ function eventListeners() {
         }
     });
 
-    const imgElement = document.getElementById("main-image-container");
-    imgElement.addEventListener("mouseover", genericWeatherAdvisement);
-    imgElement.addEventListener("mouseout", hideWeatherAdvisement);
+    const tooltipDiv = document.getElementById("tooltip-div");
+    tooltipDiv.addEventListener("mouseover", showTooltip);
+    tooltipDiv.addEventListener("mouseout", hideTooltip);
 }
 
 function renderMainCity() {
@@ -88,36 +84,31 @@ function renderMainCity() {
     humidity.textContent = city.Humidity + " %";
     wind.textContent = city.wind_speed + " mph";
 }
-<<<<<<< HEAD
 
-function genericWeatherAdvisement(e) {
-    const mouseoverCaption = document.getElementById("random-div");
-    const x = e.clientX;
-    const y = e.clientY;
-
-    mouseoverCaption.style.left = x + "px";
-    mouseoverCaption.style.top = y + "px";
-
-    console.log("aslkdfjasflk")
-    const imgElement = document.getElementById("main-image-container");
-    const sunnyImg = "https://t3.ftcdn.net/jpg/02/50/08/68/360_F_250086872_srlXRqANYR2IbNfIylRDc3eMO9MinjnV.jpg"
-    const cloudyImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2EMAtfJuOYFCc_-iB4I2ITrd08fw6TzZjw&usqp=CAU"
-    const overcastImg = "https://freesvg.org/img/sivvus_weather_symbols_3.png"
-    const rainyImg = "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-lightning-and-rain.png"
-    if (imgElement.src === sunnyImg) {
-        const sunnyCaption = document.createElement("div");
-        sunnyCaption.setAttribute("class", "sunny-caption");
-        sunnyCaption.textContent = "It's beautiful";
-        mouseoverCaption.appendChild(sunnyCaption);
+function showTooltip() {
+    const tooltip = document.getElementById('tooltip-span');
+    tooltip.parentNode.classList.add('show');
+    const tooltipElement = document.getElementById('tooltip-span');
+    const condition = document.getElementById("span-condition").textContent;
+    console.log(condition);
+    if (condition === "Sunny") {
+        tooltipElement.textContent = "It's bright and sunny!";
+    } 
+    else if (condition === "Partly Cloudy") {
+        tooltipElement.textContent = "A little gray today.";
+    } 
+    else if (condition === "Overcast") {
+        tooltipElement.textContent = "Full cloud coverage for today.";
+    } 
+    else if (condition === "Patchy, light rain with thunder") {
+        tooltipElement.textContent = "Think about an umbrella for today!";
     }
 }
-function hideWeatherAdvisement() {
-    const mouseoverCaptionParent = document.getElementById("random-div");
-    const mouseoverCaption = document.querySelectorAll(".sunny-caption");
-    mouseoverCaptionParent.removeChild(mouseoverCaption);
-}
+  
+  function hideTooltip() {
+    const tooltip = document.getElementById('tooltip-span');
+    tooltip.parentNode.classList.remove('show');
+  }
 
 init();
-=======
-init();
->>>>>>> main
+

@@ -6,7 +6,10 @@
 <body class="light-mode">
     <button id="mode-toggle" type="mode-submit">Press "L" to toggle Light and Dark Modes!</button>
     <h1 id="title-bar"> Our Weather App </h1>
-    <img id="main-image-container"> </img>
+    <div id="tooltip-div" class="tooltip">
+        <img id="main-image-container"> </img>
+        <span id="tooltip-span" class="tooltiptext"> No city selected! </span>
+    </div>
     <div id="random-div"></div>
     <div id="main-weather-container">
         <li id="city-name">Viewing: <span id="span-city-name"> </span> </li>
@@ -24,8 +27,4 @@
 </body>
 <script type="text/javascript" src = index.js defer></script>
 </head>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 6bac469baa1d2bcf84ffa6ef8926b1acf455ff23
