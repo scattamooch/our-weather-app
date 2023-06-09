@@ -8,7 +8,7 @@
             "rain": "0.08",
             "Humidity": "27",  
             "wind_speed": "8.1",
-            "img_url": "https://t3.ftcdn.net/jpg/02/50/08/68/360_F_250086872_srlXRqANYR2IbNfIylRDc3eMO9MinjnV.jpg"
+            "img_url": "https://freesvg.org/img/sivvus_weather_symbols_1.png"
         },
         {
             "name": "Chicago",
@@ -28,7 +28,7 @@
             "rain": "1.12",
             "Humidity": "72",
             "wind_speed": "9.4",
-            "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2EMAtfJuOYFCc_-iB4I2ITrd08fw6TzZjw&usqp=CAU"
+            "img_url": "https://freesvg.org/img/sivvus_weather_symbols_2.png"
         },
         {
             "name": "Denver",
@@ -38,7 +38,7 @@
             "rain": "0.02",
             "Humidity": "75",
             "wind_speed": "6.9",
-            "img_url": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-lightning-and-rain.png"
+            "img_url": "https://freesvg.org/img/sivvus_weather_symbols_4.png"
         },
         {
             "name": "Los Angeles",
@@ -48,8 +48,9 @@
             "rain": "0",
             "Humidity": "61",
             "wind_speed": "2.2",
-            "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2EMAtfJuOYFCc_-iB4I2ITrd08fw6TzZjw&usqp=CAU"
+            "img_url": "https://freesvg.org/img/sivvus_weather_symbols_2.png"
             
         }
     ]
 }
+

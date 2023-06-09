@@ -7,7 +7,7 @@ function init() {
 //global variables --> 
 const Cities_URL = "http://localhost:3000/cities";
 let cities = [];
-const uglyImgLink = "https://cdn.dribbble.com/users/1798374/screenshots/10355316/media/75206ff46afe3dee7f2cd9a22426581f.png?compress=1&resize=400x300" //"blank page" image
+const uglyImgLink = "https://freesvg.org/img/1543865993.png" //"blank page" image
 
 //renders the "landing page" so the fields aren't blank on page load --> can move variables to global scope to cut down on reptition
 //can potentially remove this entirely and give its functionality to another function?
@@ -30,7 +30,7 @@ function blankCities() {
     humidity.textContent = "No humidity data available";
     wind.textContent = "No wind data available";
 }
-//fetch saves cityData to an array (declared in global scope) to
+//fetch saves cityData to an array (declared in global scope) for easier access
 function getCities() {
     fetch(Cities_URL)
     .then(response => response.json())
@@ -46,12 +46,16 @@ function renderCities(cities) {
 }
 //actually renders the navbar --> can probably remove value and ID, they were more relevant for the dropdown menu than a navbar
 function renderCityNavBar(city, navBar) {
-    const navItem = document.createElement("div");
+    const navItem = document.createElement("button");
+    const navTemp = document.createElement("div");
+    navTemp.textContent = city.temperature + " °F";
     navItem.textContent = city.name;
-    navItem.value = city.name;
+    navItem.value = "button";
+    navItem.classList.add("glow-on-hover");
     navItem.id = city.name;
     navItem.addEventListener("click", () => renderMainCity(city));
     navBar.appendChild(navItem);
+    navItem.appendChild(navTemp);
 }
 //keydown and mouseover/mouseout events housed in one spot, called by the init function. "Modes" can be edited via their sections in CSS. 
 function eventListeners() {
